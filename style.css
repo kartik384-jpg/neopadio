@@ -129,7 +129,7 @@ nav{
 .lightbox-dots span.active{background:#fff;}
 
 /* SECTION generic */
-section{padding:70px 0;border-top:1px solid var(--border);}
+section{padding:70px 0;border-top:1px solid var(--border);scroll-margin-top:150px;}
 .eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:14px;}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;}
 .two-col h2{font-size:32px;line-height:1.25;margin-bottom:18px;}
