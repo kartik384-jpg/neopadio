@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoPadio — Your AI-powered knowledge workspace</title>
+<!-- Google Analytics — replace G-EGB7CDBP2E with your own Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EGB7CDBP2E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EGB7CDBP2E');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Neo<b>Padio</b><span class="badge-pill">PRE-RELEASE</span></div>
+    <ul class="nav-links">
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#sources">How it works</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-dark">Book a demo</a>
+  </nav>
+</header>
+
+<section class="hero" style="border-top:none;">
+  <div class="wrap">
+    <span class="eyebrow-pill">PRE-RELEASE · PRIVATE BETA</span>
+    <h1>Your AI-powered<br><em>knowledge workspace.</em></h1>
+    <p class="lead">Save notes, books, articles and videos in one place. NeoPadio organizes your knowledge and lets you chat with everything you've saved.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-dark">Request early access</a>
+      <a href="#sources" class="btn btn-outline">How it works</a>
+    </div>
+    <div class="tabs" id="hero-tabs">
+      <span class="tab active" data-tab="home" onclick="selectHeroTab('home')">Home</span>
+      <span class="tab" data-tab="memories" onclick="selectHeroTab('memories')">Memories</span>
+      <span class="tab" data-tab="notes" onclick="selectHeroTab('notes')">Notes</span>
+      <span class="tab" data-tab="books" onclick="selectHeroTab('books')">Books</span>
+      <span class="tab" data-tab="articles" onclick="selectHeroTab('articles')">Articles</span>
+      <span class="tab" data-tab="videos" onclick="selectHeroTab('videos')">Videos</span>
+    </div>
+    <div class="mockup-carousel">
+      <span class="carousel-btn hero-btn prev" onclick="heroPrev()" aria-label="Previous screenshot">&#8249;</span>
+      <div class="mockup">
+        <div class="mockup-bar"><span></span><span></span><span></span><span class="url">neopadio.com</span></div>
+        <div class="mockup-img-wrap" onclick="openHeroLightbox()">
+          <img id="img-hero" src="assets/hero.png" alt="NeoPadio interface preview">
+        </div>
+      </div>
+      <span class="carousel-btn hero-btn next" onclick="heroNext()" aria-label="Next screenshot">&#8250;</span>
+    </div>
+    <div class="gallery-dots" id="dots-hero"></div>
+    <p class="mockup-caption">This is the actual NeoPadio interface. Currently in private beta. Click a tab or the arrows to browse every screen.</p>
+  </div>
+</section>
+
+<section id="philosophy">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">The problem</div>
+      <h2>Your knowledge is scattered.<br>None of it talks to each other.</h2>
+      <p>Notes live in one app. Books are somewhere else. Articles stay buried in browser bookmarks. Videos disappear inside YouTube history.</p>
+      <p>You keep saving things. But when you need to find something or connect ideas across sources, it's gone. Not because you didn't care, but because no tool brings it all together.</p>
+    </div>
+    <div>
+      <div class="eyebrow">What NeoPadio does</div>
+      <h2>One searchable workspace<br>for everything you learn.</h2>
+      <p>NeoPadio brings your notes, books, articles and videos into one place. AI understands each one, generates summaries and key ideas, and lets you ask questions across everything you've saved.</p>
+      <p>It doesn't just store what you learn. It helps you understand it.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2 style="font-size:32px;">Four steps. One knowledge workspace.</h2>
+    <div class="cards-4">
+      <div class="card"><div class="num">01</div><h3>Save</h3><p>Add notes, upload books, save articles or paste a YouTube link.</p></div>
+      <div class="card"><div class="num">02</div><h3>AI understands it</h3><p>NeoPadio generates a summary, key ideas and insights for everything you save.</p></div>
+      <div class="card"><div class="num">03</div><h3>Ask questions</h3><p>Chat naturally with your notes, books, articles or videos.</p></div>
+      <div class="card"><div class="num">04</div><h3>Build your library</h3><p>Everything stays organized and searchable in one place.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section class="feature">
+  <div class="wrap two-col">
+    <div>
+      <div class="index">00</div>
+      <h2 style="font-size:26px;">Memories</h2>
+      <div class="situation-label" style="margin-top:18px;">The situation</div>
+      <p>You're in a meeting, on a call, or a thought just hits you while you're walking. You want to capture it right now, without breaking your flow, and understand it properly later.</p>
+      <p>Record a quick voice note, or turn on the meeting recorder to capture your screen and mic during any online call. NeoPadio transcribes it, summarizes it, and pulls out topics and action items automatically. Then ask questions across everything you've ever captured.</p>
+      <div class="mockup-carousel" style="margin-top:30px;">
+        <span class="carousel-btn prev" onclick="prevImage('memories')" aria-label="Previous screenshot">&#8249;</span>
+        <div class="mockup">
+          <div class="mockup-bar"><span></span><span></span><span></span><span class="url">neopadio.com</span></div>
+          <div class="mockup-img-wrap" onclick="openLightbox('memories',galleryState.memories)">
+            <img id="img-memories" src="assets/memories-1.png" alt="Capture Memory: Voice Note or Meeting Recorder">
+          </div>
+        </div>
+        <span class="carousel-btn next" onclick="nextImage('memories')" aria-label="Next screenshot">&#8250;</span>
+      </div>
+      <div class="gallery-dots" id="dots-memories"></div>
+    </div>
+    <div class="feature-highlights">
+      <div class="eyebrow">What NeoPadio does</div>
+      <div class="h-card active"><div class="h-title">Voice Notes</div><p>Capture a thought, idea, or reminder in your own voice — a startup idea, a reflection, a quick reminder.</p></div>
+      <div class="h-card"><div class="h-title">Meeting Recorder</div><p>Record screen + mic for Google Meet, Zoom, Teams or any webinar. Get the transcript and summary automatically.</p></div>
+      <div class="h-card"><div class="h-title">Auto summary, topics &amp; action items</div><p>Every memory gets a summary, key topics, and action items pulled out for you, no manual note-taking needed.</p></div>
+      <div class="h-card"><div class="h-title">Ask across your memories</div><p>Search or ask questions across everything you've captured — promises, follow-ups, people, topics.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTES -->
+<section class="feature">
+  <div class="wrap two-col">
+    <div>
+      <div class="index">01</div>
+      <h2 style="font-size:26px;">Notes</h2>
+      <div class="situation-label" style="margin-top:18px;">The situation</div>
+      <p>You read something interesting and want to actually understand it, not just file it away.</p>
+      <p>Write a note on any topic. NeoPadio generates insights automatically and explains difficult concepts in plain language. Then chat with your note to test and deepen your understanding.</p>
+      <div class="mockup-carousel" style="margin-top:30px;">
+        <span class="carousel-btn prev" onclick="prevImage('notes')" aria-label="Previous screenshot">&#8249;</span>
+        <div class="mockup">
+          <div class="mockup-bar"><span></span><span></span><span></span><span class="url">neopadio.com</span></div>
+          <div class="mockup-img-wrap" onclick="openLightbox('notes',galleryState.notes)">
+            <img id="img-notes" src="assets/notes-1.png" alt="AI Insights panel: Feynman Mode explains a note on AI and the Industrial Revolution">
+          </div>
+        </div>
+        <span class="carousel-btn next" onclick="nextImage('notes')" aria-label="Next screenshot">&#8250;</span>
+      </div>
+      <div class="gallery-dots" id="dots-notes"></div>
+    </div>
+    <div class="feature-highlights">
+      <div class="eyebrow">What NeoPadio does</div>
+      <div class="h-card active"><div class="h-title">Generate Insights</div><p>NeoPadio reads your note and surfaces the most important concepts worth understanding deeply.</p></div>
+      <div class="h-card"><div class="h-title">Feynman Mode</div><p>Explains any concept in plain language, like teaching it to a beginner. Switch between English and Hinglish.</p></div>
+      <div class="h-card"><div class="h-title">Chat with your note</div><p>Ask questions about anything in your note. Answered in the context of your own words.</p></div>
+      <div class="h-card"><div class="h-title">Simplify or go deeper</div><p>Quick actions to summarize, quiz yourself, or get a simpler explanation, right from the chat panel.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section class="feature">
+  <div class="wrap two-col">
+    <div>
+      <div class="index">02</div>
+      <h2 style="font-size:26px;">Books</h2>
+      <div class="situation-label" style="margin-top:18px;">The situation</div>
+      <p>You uploaded a book three weeks ago. You want to remember what it said about a specific topic, without re-reading the whole thing.</p>
+      <p>Upload any PDF to your personal library. Read it inside NeoPadio, bookmark where you left off, and get an AI analysis of the entire book. Then ask it anything.</p>
+      <div class="mockup-carousel" style="margin-top:30px;">
+        <span class="carousel-btn prev" onclick="prevImage('books')" aria-label="Previous screenshot">&#8249;</span>
+        <div class="mockup">
+          <div class="mockup-bar"><span></span><span></span><span></span><span class="url">neopadio.com</span></div>
+          <div class="mockup-img-wrap" onclick="openLightbox('books',galleryState.books)">
+            <img id="img-books" src="assets/books-1.png" alt="Your personal book library with uploaded PDFs">
+          </div>
+        </div>
+        <span class="carousel-btn next" onclick="nextImage('books')" aria-label="Next screenshot">&#8250;</span>
+      </div>
+      <div class="gallery-dots" id="dots-books"></div>
+    </div>
+    <div class="feature-highlights">
+      <div class="eyebrow">What NeoPadio does</div>
+      <div class="h-card active"><div class="h-title">Personal Library</div><p>Upload any PDF and it appears in your library. Resume reading from your bookmarked page every time.</p></div>
+      <div class="h-card"><div class="h-title">AI Book Analysis</div><p>Summary, key themes, difficulty level, and who should read it, generated from the book itself.</p></div>
+      <div class="h-card"><div class="h-title">Chat with the book</div><p>Ask anything about the book's content. What are the author's main arguments? Explain like I'm 15.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="feature">
+  <div class="wrap two-col">
+    <div>
+      <div class="index">03</div>
+      <h2 style="font-size:26px;">Articles</h2>
+      <div class="situation-label" style="margin-top:18px;">The situation</div>
+      <p>You saved an article to read later. Later never comes. And when it does, you've already forgotten why you saved it.</p>
+      <p>Save any article from the web with one click. Read it in a clean, distraction-free reader inside NeoPadio. Get an AI summary and key topics. Chat with it to go deeper.</p>
+      <div class="mockup-carousel" style="margin-top:30px;">
+        <span class="carousel-btn prev" onclick="prevImage('articles')" aria-label="Previous screenshot">&#8249;</span>
+        <div class="mockup">
+          <div class="mockup-bar"><span></span><span></span><span></span><span class="url">neopadio.com</span></div>
+          <div class="mockup-img-wrap" onclick="openLightbox('articles',galleryState.articles)">
+            <img id="img-articles" src="assets/articles-1.png" alt="Articles library: everything you've saved, in one place">
+          </div>
+        </div>
+        <span class="carousel-btn next" onclick="nextImage('articles')" aria-label="Next screenshot">&#8250;</span>
+      </div>
+      <div class="gallery-dots" id="dots-articles"></div>
+    </div>
+    <div class="feature-highlights">
+      <div class="eyebrow">What NeoPadio does</div>
+      <div class="h-card active"><div class="h-title">Save from anywhere</div><p>Save articles from the web into NeoPadio. No more lost browser tabs or forgotten bookmarks.</p></div>
+      <div class="h-card"><div class="h-title">Distraction-free reader</div><p>Read saved articles in a clean, focused reader inside NeoPadio. No ads, no clutter.</p></div>
+      <div class="h-card"><div class="h-title">AI summary and key topics</div><p>Every article gets a summary and extracted key topics automatically when you save it.</p></div>
+      <div class="h-card"><div class="h-title">Chat with the article</div><p>Ask questions, get counterarguments, or ask for a simpler explanation of anything in the piece.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="feature">
+  <div class="wrap two-col">
+    <div>
+      <div class="index">04</div>
+      <h2 style="font-size:26px;">Videos</h2>
+      <div class="situation-label" style="margin-top:18px;">The situation</div>
+      <p>You watched a 2-hour lecture on YouTube. You got a lot out of it. Two days later, you remember almost nothing.</p>
+      <p>Paste a YouTube link into NeoPadio. It generates a summary, extracts key ideas, and gives you a full transcript. Chat with the video's knowledge like you'd chat with a note.</p>
+      <div class="mockup-carousel" style="margin-top:30px;">
+        <span class="carousel-btn prev" onclick="prevImage('videos')" aria-label="Previous screenshot">&#8249;</span>
+        <div class="mockup">
+          <div class="mockup-bar"><span></span><span></span><span></span><span class="url">neopadio.com</span></div>
+          <div class="mockup-img-wrap" onclick="openLightbox('videos',galleryState.videos)">
+            <img id="img-videos" src="assets/videos-1.png" alt="Videos library: saved YouTube videos with thumbnails and duration">
+          </div>
+        </div>
+        <span class="carousel-btn next" onclick="nextImage('videos')" aria-label="Next screenshot">&#8250;</span>
+      </div>
+      <div class="gallery-dots" id="dots-videos"></div>
+    </div>
+    <div class="feature-highlights">
+      <div class="eyebrow">What NeoPadio does</div>
+      <div class="h-card active"><div class="h-title">Save YouTube videos</div><p>Paste any YouTube link and NeoPadio saves it to your library with the thumbnail and duration.</p></div>
+      <div class="h-card"><div class="h-title">AI summary and key ideas</div><p>Every video gets a summary and a list of key ideas, generated from the video's content.</p></div>
+      <div class="h-card"><div class="h-title">Chat with the video</div><p>Ask questions about what was said in the video, answered from the actual content.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="wrap">
+    <div class="eyebrow">Roadmap</div>
+    <h2 style="font-size:32px;">What we've built. What's next.</h2>
+    <p style="color:var(--muted);margin-top:10px;">We're building NeoPadio phase by phase. Every feature ships when it's genuinely useful, not before.</p>
+    <div class="roadmap-cards">
+      <div class="card">
+        <div class="phase-num">Phase 01</div>
+        <div class="phase-title">Memories</div>
+        <span class="status-pill built">Built</span>
+        <ul>
+          <li>Voice notes</li>
+          <li>Meeting recorder (screen + mic)</li>
+          <li>Auto summary, topics &amp; action items</li>
+          <li>Ask across your memories</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="phase-num">Phase 02</div>
+        <div class="phase-title">Notes</div>
+        <span class="status-pill built">Built</span>
+        <ul>
+          <li>Rich text notes editor</li>
+          <li>AI Insights generation</li>
+          <li>Feynman Mode (English + Hinglish)</li>
+          <li>Chat with notes</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="phase-num">Phase 03</div>
+        <div class="phase-title">Books</div>
+        <span class="status-pill built">Built</span>
+        <ul>
+          <li>PDF upload and library</li>
+          <li>In-app PDF reader with bookmarks</li>
+          <li>AI Book Analysis</li>
+          <li>Chat with book</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="phase-num">Phase 04</div>
+        <div class="phase-title">Articles</div>
+        <span class="status-pill built">Built</span>
+        <ul>
+          <li>Save articles from the web</li>
+          <li>Clean article reader</li>
+          <li>AI summary and key topics</li>
+          <li>Chat with the article</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="phase-num">Phase 05</div>
+        <div class="phase-title">Videos</div>
+        <span class="status-pill built">Built</span>
+        <ul>
+          <li>Save YouTube videos</li>
+          <li>AI summary and key ideas</li>
+          <li>Full transcript</li>
+          <li>Chat with the video</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 style="font-size:28px;margin-bottom:10px;">What makes NeoPadio different</h2>
+    <div class="diff-cards">
+      <div><h3>One place for everything</h3><p>Notes, books, articles, and videos in a single workspace. No more switching between apps or losing track of what you saved where.</p></div>
+      <div><h3>AI that actually understands</h3><p>Every piece of content gets a summary, key ideas, and a chat interface grounded in what you actually saved. Not generic responses.</p></div>
+      <div><h3>Built to understand, not just store</h3><p>Saving is easy. Understanding is the hard part. Every feature in NeoPadio is designed to close that gap.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Connect</div>
+    <h2 style="font-size:32px;">Want to know more?</h2>
+    <p style="color:var(--muted);margin-top:10px;max-width:560px;">We're sharing NeoPadio with a small group of early users. Book a walkthrough, send an email, or message us on WhatsApp.</p>
+    <div class="connect-cards">
+      <a href="https://calendly.com/YOUR_CALENDLY_LINK" class="connect-card active">
+        <div class="icon-circle">📅</div>
+        <h3>Book a demo</h3>
+        <p>Schedule a 20-minute walkthrough. See NeoPadio in action and ask us anything.</p>
+        <div class="link">Pick a time →</div>
+      </a>
+      <a href="mailto:kartik384@gmail.com" class="connect-card">
+        <div class="icon-circle">✉️</div>
+        <h3>Send an email</h3>
+        <p>Have a question, a collaboration idea, or just want to connect? Drop us a message.</p>
+        <div class="link">kartik384@gmail.com</div>
+      </a>
+      <a href="https://wa.me/919899485909" class="connect-card">
+        <div class="icon-circle">💬</div>
+        <h3>WhatsApp</h3>
+        <p>Message us first on WhatsApp. We'll reply and set up a time for a call from there.</p>
+        <div class="link">Message first, then we'll schedule a call →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div>
+    <div class="logo">Neo<b>Padio</b></div>
+    <div style="color:var(--muted);font-size:13px;margin-top:4px;">Understanding workspace · Pre-release</div>
+  </div>
+  <div class="quote">"We learn by building."</div>
+  <div class="foot-links">
+    <a href="#sources">How it works</a>
+    <a href="about.html">About us</a>
+    <a href="#contact">Connect</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="if(event.target===this)closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <span class="lightbox-nav lightbox-prev" onclick="lbPrev()">&#8249;</span>
+  <img id="lightbox-img" src="" alt="NeoPadio screenshot, enlarged">
+  <span class="lightbox-nav lightbox-next" onclick="lbNext()">&#8250;</span>
+  <div class="lightbox-dots" id="lightbox-dots"></div>
+</div>
+
+<script>
+  const galleries = {
+    home: ['assets/hero.png'],
+    memories: ['assets/memories-1.png','assets/memories-2.png'],
+    notes: ['assets/notes-1.png','assets/notes-2.png'],
+    books: ['assets/books-1.png','assets/books-2.png','assets/books-3.png'],
+    articles: ['assets/articles-1.png','assets/articles-2.png','assets/articles-3.png'],
+    videos: ['assets/videos-1.png','assets/videos-2.png']
+  };
+  const galleryState = {};
+  Object.keys(galleries).forEach(k => galleryState[k] = 0);
+
+  function renderDots(key){
+    const dotsEl = document.getElementById('dots-' + key);
+    if(!dotsEl) return;
+    const imgs = galleries[key];
+    if(imgs.length <= 1){ dotsEl.innerHTML = ''; return; }
+    dotsEl.innerHTML = imgs.map((_, i) =>
+      '<span class="' + (i === galleryState[key] ? 'active' : '') + '" onclick="event.stopPropagation();setImage(\'' + key + '\',' + i + ')"></span>'
+    ).join('');
+  }
+
+  function setImage(key, idx){
+    galleryState[key] = idx;
+    const img = document.getElementById('img-' + key);
+    if(img) img.src = galleries[key][idx];
+    renderDots(key);
+  }
+
+  function prevImage(key){ const g = galleries[key]; setImage(key, (galleryState[key] - 1 + g.length) % g.length); }
+  function nextImage(key){ const g = galleries[key]; setImage(key, (galleryState[key] + 1) % g.length); }
+
+  /* hero carousel: ONE continuous tour across every screenshot on the site.
+     Arrows move through home -> memories -> notes -> books -> articles -> videos, in order.
+     Clicking a tab jumps straight to the first screenshot of that section. */
+  const heroOrder = ['home','memories','notes','books','articles','videos'];
+  const heroAll = [];
+  heroOrder.forEach(function(tab){
+    galleries[tab].forEach(function(src, i){ heroAll.push({ tab: tab, src: src, localIndex: i }); });
+  });
+  let heroPos = 0;
+
+  function updateHeroFromPos(){
+    const item = heroAll[heroPos];
+    document.getElementById('img-hero').src = item.src;
+    document.querySelectorAll('#hero-tabs .tab').forEach(function(el){
+      el.classList.toggle('active', el.getAttribute('data-tab') === item.tab);
+    });
+    renderHeroDots(item.tab, item.localIndex);
+  }
+
+  function renderHeroDots(tab, localIndex){
+    const dotsEl = document.getElementById('dots-hero');
+    const imgs = galleries[tab];
+    if(imgs.length <= 1){ dotsEl.innerHTML = ''; return; }
+    dotsEl.innerHTML = imgs.map((_, i) =>
+      '<span class="' + (i === localIndex ? 'active' : '') + '" onclick="event.stopPropagation();heroGotoLocal(\'' + tab + '\',' + i + ')"></span>'
+    ).join('');
+  }
+
+  function heroGotoLocal(tab, i){
+    heroPos = heroAll.findIndex(function(item){ return item.tab === tab && item.localIndex === i; });
+    updateHeroFromPos();
+  }
+
+  function selectHeroTab(tab){
+    heroPos = heroAll.findIndex(function(item){ return item.tab === tab; });
+    updateHeroFromPos();
+  }
+
+  function heroPrev(){ heroPos = (heroPos - 1 + heroAll.length) % heroAll.length; updateHeroFromPos(); }
+  function heroNext(){ heroPos = (heroPos + 1) % heroAll.length; updateHeroFromPos(); }
+
+  function openHeroLightbox(){
+    openLightboxFromArray(heroAll.map(function(it){ return it.src; }), heroPos, function(i){
+      heroPos = i;
+      updateHeroFromPos();
+    });
+  }
+
+  /* lightbox: generic — works off any array of image paths, with an optional
+     callback so the underlying inline gallery (hero or a feature section)
+     stays in sync as you browse. */
+  let lbImages = [], lbIndex = 0, lbOnChange = null;
+
+  function openLightboxFromArray(images, idx, onChange){
+    lbImages = images;
+    lbIndex = idx || 0;
+    lbOnChange = onChange || null;
+    renderLightbox();
+    document.getElementById('lightbox').classList.add('open');
+  }
+
+  function openLightbox(key, idx){
+    openLightboxFromArray(galleries[key], idx, function(i){ setImage(key, i); });
+  }
+
+  function renderLightbox(){
+    document.getElementById('lightbox-img').src = lbImages[lbIndex];
+    const dotsEl = document.getElementById('lightbox-dots');
+    dotsEl.innerHTML = lbImages.length > 1 ? lbImages.map((_, i) =>
+      '<span class="' + (i === lbIndex ? 'active' : '') + '" onclick="lbGoto(' + i + ')"></span>'
+    ).join('') : '';
+    document.querySelector('.lightbox-prev').style.display = lbImages.length > 1 ? 'block' : 'none';
+    document.querySelector('.lightbox-next').style.display = lbImages.length > 1 ? 'block' : 'none';
+    if(lbOnChange) lbOnChange(lbIndex);
+  }
+
+  function lbGoto(i){ lbIndex = i; renderLightbox(); }
+  function lbPrev(){ lbIndex = (lbIndex - 1 + lbImages.length) % lbImages.length; renderLightbox(); }
+  function lbNext(){ lbIndex = (lbIndex + 1) % lbImages.length; renderLightbox(); }
+  function closeLightbox(){ document.getElementById('lightbox').classList.remove('open'); }
+
+  document.addEventListener('keydown', function(e){
+    if(!document.getElementById('lightbox').classList.contains('open')) return;
+    if(e.key === 'Escape') closeLightbox();
+    if(e.key === 'ArrowLeft') lbPrev();
+    if(e.key === 'ArrowRight') lbNext();
+  });
+
+  Object.keys(galleries).forEach(renderDots);
+  updateHeroFromPos();
+</script>
+
+</body>
+</html>
